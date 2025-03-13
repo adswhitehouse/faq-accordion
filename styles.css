@@ -67,7 +67,6 @@ textarea:not([rows]) {
 body {
   font-family: "Work Sans", sans-serif;
   background-color: #f8eeff;
-  /* overflow-x: hidden; */
 }
 
 /* Main */
