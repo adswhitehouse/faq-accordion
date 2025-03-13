@@ -35,13 +35,6 @@ label {
   line-height: 1.1;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
@@ -73,13 +66,18 @@ textarea:not([rows]) {
 /* Body */
 body {
   font-family: "Work Sans", sans-serif;
+  background-color: #f8eeff;
 }
 
 /* Main */
 main {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-block: 20vh 2.5rem;
 }
 
 .banner-img {
@@ -88,4 +86,60 @@ main {
   width: 100vw;
   height: 33vh;
   object-fit: cover;
+  z-index: -1;
+}
+
+/* FAQ Container */
+.faq-container {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  max-width: 37.5rem;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(139, 105, 144, 0.25);
+}
+
+/* Container Contents */
+.main-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-heading h1 {
+  font-size: 3.5rem;
+  color: #301534;
+}
+
+.sub-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.sub-heading h2 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #301534;
+}
+
+.sub-heading img {
+  cursor: pointer;
+}
+
+.faq-question {
+  margin-top: 2rem;
+}
+
+.answer {
+  color: rgb(139, 105, 144);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+/* Toggle Answer Visibility */
+.show-answer {
+  height: 6rem;
 }
